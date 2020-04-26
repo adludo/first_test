@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
 import {
@@ -25,14 +26,24 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
+  const [outputText, setOutputText] = useState('Open up App.js to start working on app');
   return (
+    // <SafeAreaView>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on app</Text>
+      <Text>{outputText}</Text>
+      <Button title="Change Text" onPress={() => setOutputText('The new text')} />
     </View>
+    //</SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
