@@ -29,7 +29,6 @@ import {
 export default function App() {
   const [outputText, setOutputText] = useState('Open up App.js to start working on app');
   return (
-    // <SafeAreaView>
     <View style={{padding: 50}}>
       <View style = {{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
         <TextInput 
@@ -41,7 +40,6 @@ export default function App() {
         
       </View>      
     </View>
-    //</SafeAreaView>
   );
 }
 
